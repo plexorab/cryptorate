@@ -4,10 +4,23 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const mongoose = require('mongoose');
+
+const { getUri, getOptions } = require('./db/mongodb');
 
 const indexRouter = require('./routes/index');
 const exchangeRouter = require('./routes/exchange');
 const assetRouter = require('./routes/asset');
+
+mongoose.connect(getUri(), getOptions())
+	.then(() => {
+		console.log('Connected');
+	})
+	.catch((error) => {
+		process.exit(-1);
+	});
+
+const db = mongoose.connection;  
 
 const app = express();
 
