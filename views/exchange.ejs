@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <table>
+		<% for(var i=0; i < exchanges.data.length; i++) { %>
+   			<tr>
+          <td><%= exchanges.data[i].exchange_id %></td>
+     			<td><%= exchanges.data[i].name %></td>
+     			<td><%= exchanges.data[i].website %></td>
+   			</tr>
+		<% } %>
+	</table>
+
+  </body>
+</html>
