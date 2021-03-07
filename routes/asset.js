@@ -11,7 +11,7 @@ router.get('/', asyncMiddleware(async (req, res, next) => {
 	let assets = {};
 	try {
 		assets = await getAssets();
-		await saveAssets(assets);
+		await saveAssets(assets.data);
 	} catch (err) {
 		console.error(err);
 	}
