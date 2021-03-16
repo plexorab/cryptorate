@@ -13,14 +13,14 @@ const exchangeRouter = require('./routes/exchange');
 const assetRouter = require('./routes/asset');
 
 mongoose.connect(getUri(), getOptions())
-	.then(() => {
-		console.log('Connected');
-	})
-	.catch((error) => {
-		process.exit(-1);
-	});
+  .then(() => {
+    console.log('Connected');
+  })
+  .catch((error) => {
+    process.exit(-1);
+  });
 
-const db = mongoose.connection;  
+const db = mongoose.connection;
 
 const app = express();
 

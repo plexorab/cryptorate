@@ -5,9 +5,9 @@ const getExchanges = async () => {
 
   return await axios.get(url, {
     headers: {
-    	Accept: 'application/json',
-    	'Accept-Encoding': 'deflate, gzip',
-		'X-CoinAPI-Key': process.env.API_KEY,
+      Accept: 'application/json',
+      'Accept-Encoding': 'deflate, gzip',
+      'X-CoinAPI-Key': process.env.API_KEY,
     },
   });
 };
@@ -17,9 +17,9 @@ const getAssets = async () => {
 
   return await axios.get(url, {
     headers: {
-    	Accept: 'application/json',
-    	'Accept-Encoding': 'deflate, gzip',
-		'X-CoinAPI-Key': process.env.API_KEY,
+      Accept: 'application/json',
+      'Accept-Encoding': 'deflate, gzip',
+      'X-CoinAPI-Key': process.env.API_KEY,
     },
   });
 };
